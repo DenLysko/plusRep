@@ -14,7 +14,6 @@ namespace Lesson_13_7
 			};
 			Console.WriteLine(triangle.ToString());
 			Console.WriteLine("hello");
-			Console.WriteLine("Хай!");
 		}
 
 		public class Point
