@@ -24,14 +24,14 @@ namespace Digger
                     y + command.DeltaY >= Game.MapHeight)
                     throw new Exception($"The object {creature.GetType()} falls out of the game field");
 
-                Animations.Add(
-                    new CreatureAnimation
-                    {
-                        Command = command,
-                        Creature = creature,
-                        Location = new Point(x * ElementSize, y * ElementSize),
-                        TargetLogicalLocation = new Point(x + command.DeltaX, y + command.DeltaY)
-                    });
+                    Animations.Add(
+                new CreatureAnimation
+                {
+                    Command = command,
+                    Creature = creature,
+                    Location = new Point(x * ElementSize, y * ElementSize),
+                    TargetLogicalLocation = new Point(x + command.DeltaX, y + command.DeltaY)
+                });
             }
 
             Animations = Animations.OrderByDescending(z => z.Creature.GetDrawingPriority()).ToList();
