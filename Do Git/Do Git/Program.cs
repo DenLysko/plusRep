@@ -7,6 +7,7 @@ namespace FirstDayWithGit
         static void Main() 
         {
             Console.WriteLine("Hello, World");
+            Console.WriteLine("Hello, World");
         }
     }
 }
