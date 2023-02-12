@@ -13,8 +13,6 @@ namespace Lesson_13_7
 				C = new Point { X = 3, Y = 2 }
 			};
 			Console.WriteLine(triangle.ToString());
-			Console.WriteLine("hello");
-			Console.WriteLine("Hi!");
 		}
 
 		public class Point
