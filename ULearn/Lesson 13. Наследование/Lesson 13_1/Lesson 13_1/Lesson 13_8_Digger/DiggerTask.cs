@@ -15,7 +15,7 @@ namespace Digger
                 DeltaX = 0,
                 DeltaY = 0,
                 TransformTo = null
-            } ;
+            };
         }
 
         public bool DeadInConflict(ICreature conflictedObject)
