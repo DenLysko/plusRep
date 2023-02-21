@@ -35,17 +35,18 @@ namespace Digger
         }
     }
 
+
     public class Player : ICreature
     {
         public CreatureCommand Act(int x, int y)
         {
-            if (Game.KeyPressed == System.Windows.Forms.Keys.Up)
+            if (Game.KeyPressed == System.Windows.Forms.Keys.Up && y > 0)
                 return new CreatureCommand() { DeltaX = 0, DeltaY = -1, TransformTo = null };
-            else if (Game.KeyPressed == System.Windows.Forms.Keys.Left)
+            else if (Game.KeyPressed == System.Windows.Forms.Keys.Left && x > 0)
                 return new CreatureCommand() { DeltaX = -1, DeltaY = 0, TransformTo = null };
-            else if (Game.KeyPressed == System.Windows.Forms.Keys.Down)
+            else if (Game.KeyPressed == System.Windows.Forms.Keys.Down && y < Game.MapHeight - 1)
                 return new CreatureCommand() { DeltaX = 0, DeltaY = 1, TransformTo = null };
-            else if (Game.KeyPressed == System.Windows.Forms.Keys.Right)
+            else if (Game.KeyPressed == System.Windows.Forms.Keys.Right && x < Game.MapWidth - 1)
                 return new CreatureCommand() { DeltaX = 1, DeltaY = 0, TransformTo = null };
             else
                 return new CreatureCommand() { DeltaX = 0, DeltaY = 0, TransformTo = null };
@@ -54,7 +55,7 @@ namespace Digger
         public bool DeadInConflict(ICreature conflictedObject)
         {
             //CreatureCommand a = conflictedObject.Act(0, 0);
-            return true;
+            return false;
             //throw new Exception($"The object {this} falls out of the game field");
         }
 
@@ -69,4 +70,61 @@ namespace Digger
         }
     }
 
+
+    public class Sack : ICreature
+    {
+        public CreatureCommand Act(int x, int y)
+        {
+            return new CreatureCommand()
+            {
+                DeltaX = 0,
+                DeltaY = 0,
+                TransformTo = null
+            };
+        }
+
+        public bool DeadInConflict(ICreature conflictedObject)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetDrawingPriority()
+        {
+            return 2;
+        }
+
+        public string GetImageFileName()
+        {
+            return "Sack.png";
+        }
+    }
+
+
+    public class Gold : ICreature
+    {
+        public CreatureCommand Act(int x, int y)
+        {
+            return new CreatureCommand()
+            {
+                DeltaX = 0,
+                DeltaY = 0,
+                TransformTo = null
+            };
+        }
+
+        public bool DeadInConflict(ICreature conflictedObject)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetDrawingPriority()
+        {
+            return 3;
+        }
+
+        public string GetImageFileName()
+        {
+            return "Gold.png";
+        }
+    }
 }
