@@ -74,5 +74,18 @@ namespace Digger
             if (tickCount == 8) tickCount = 0;
             Invalidate();
         }
+
+        //private void InitializeComponent()
+        //{
+        //    this.SuspendLayout();
+        //    // 
+        //    // DiggerWindow
+        //    // 
+        //    this.ClientSize = new System.Drawing.Size(282, 253);
+        //    this.Name = "DiggerWindow";
+        //    this.Load += new System.EventHandler(this.DiggerWindow_Load);
+        //    this.ResumeLayout(false);
+
+        //}
     }
 }
