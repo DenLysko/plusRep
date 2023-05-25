@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoleModelTemplate", "RoleModelTemplate\RoleModelTemplate.csproj", "{EAFCAA2C-E7F6-433D-9E2A-D91C132084BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAFCAA2C-E7F6-433D-9E2A-D91C132084BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAFCAA2C-E7F6-433D-9E2A-D91C132084BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAFCAA2C-E7F6-433D-9E2A-D91C132084BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAFCAA2C-E7F6-433D-9E2A-D91C132084BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B76A14D6-B0BD-4BBD-A21B-EB78B365BD1D}
+	EndGlobalSection
+EndGlobal
